@@ -1,0 +1,40 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.68.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 8e0d024cf68819c50d2d3a541e930ebd466e145c Changes
+SHA1 c7d8f619245a4548762fc9f6a8b7b62d53168a58 INSTALL
+SHA1 4dde25b9538eaab37558ffc59119b7e8e26e47af LICENSE
+SHA1 41544fef097f5a393780cb4927c878ea2507ac78 MANIFEST
+SHA1 f6d785e8dd294806a69e6c4c7cdf317e9d73a6ed META.json
+SHA1 725c5fc137bec9eda0f4302c7297a5368d32f4bd META.yml
+SHA1 29dcd5e945eb7dfaa4c958f42ecbcc84ecd1a609 Makefile.PL
+SHA1 b04f61a603b4c3bcb38d58707b237a12998bfaab README
+SHA1 8cb8b6b3bdfbdcd967e16860a340ec13e08a85eb corpus/dist.ini
+SHA1 bd3f3bd97769f5ce29c143b1d3398c2c75d6f8c5 corpus/lib/Foo.pm
+SHA1 451ccbdb7639b004828ab891148d74ffb5178224 dist.ini
+SHA1 8806853d65d5cde32684d49b83f6be293fa6b0b3 lib/Dist/Zilla/Plugin/PPPort.pm
+SHA1 14863e63ebceb712fe78ec64e52543a2e7909716 t/00-compile.t
+SHA1 2f69c0fa43066578d49faa2adb7ccfcf55683cc9 t/basic.t
+SHA1 88df31faa9e43288e3d7761de7c0732bd75f8b04 t/release-kwalitee.t
+SHA1 9433c240fe590bc404ab68ff63984df763e347ed t/release-pod-coverage.t
+SHA1 b30cbdfaf935017c4568c0c91b242438cb87786e t/release-pod-syntax.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iEYEARECAAYFAk6Q3VoACgkQTd+EWiaICwryaACfWlPnfUbHzPSKtEOi6OTBlqF1
+bnQAnjUgmqdM+FRQWNFHKisfkMPW9Syk
+=ks5M
+-----END PGP SIGNATURE-----

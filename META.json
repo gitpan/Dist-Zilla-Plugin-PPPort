@@ -1,0 +1,57 @@
+{
+   "abstract" : "PPPort for Dist::Zilla",
+   "author" : [
+      "Leon Timmermans <leont@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.110440",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-Plugin-PPPort",
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.30"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Devel::PPPort" : 0,
+            "Dist::Zilla::Role::FileGatherer" : 0,
+            "Moose" : 0,
+            "perl" : "5.008"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "File::Find" : 0,
+            "File::Temp" : 0,
+            "Path::Class" : 0,
+            "Test::DZil" : 0,
+            "Test::Kwalitee" : 0,
+            "Test::More" : "0.88",
+            "strict" : 0,
+            "warnings" : 0
+         }
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-dist-zilla-plugin-ppport at rt.cpan.org",
+         "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Dist-Zilla-Plugin-PPPort"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Leont/dist-zilla-plugin-ppport.git",
+         "web" : "http://github.com/Leont/dist-zilla-plugin-ppport"
+      }
+   },
+   "version" : "0.001"
+}
+
