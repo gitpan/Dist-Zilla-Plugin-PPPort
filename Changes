@@ -1,4 +1,7 @@
 Revision history for Dist-Zilla-Plugin-PPPort
 
+0.002     2011-10-09 12:45:42 Europe/Amsterdam
+          Add corpus to no_index
+
 0.001     2011-10-09 01:31:33 Europe/Amsterdam
           Released to an unsuspecting world
