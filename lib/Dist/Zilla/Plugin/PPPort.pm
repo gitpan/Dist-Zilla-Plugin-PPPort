@@ -1,6 +1,6 @@
 package Dist::Zilla::Plugin::PPPort;
 {
-  $Dist::Zilla::Plugin::PPPort::VERSION = '0.003';
+  $Dist::Zilla::Plugin::PPPort::VERSION = '0.004';
 }
 
 use 5.008;
@@ -28,6 +28,10 @@ sub gather_files {
 	return;
 }
 
+__PACKAGE__->meta->make_immutable;
+
+no Moose;
+
 1;
 
 
@@ -40,7 +44,7 @@ Dist::Zilla::Plugin::PPPort - PPPort for Dist::Zilla
 
 =head1 VERSION
 
-version 0.003
+version 0.004
 
 =head1 SYNOPSIS
 
