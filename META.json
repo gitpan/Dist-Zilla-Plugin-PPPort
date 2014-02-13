@@ -4,7 +4,7 @@
       "Leon Timmermans <leont@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.011, CPAN::Meta::Converter version 2.132830",
    "license" : [
       "perl_5"
    ],
@@ -21,7 +21,7 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "Module::Build::Tiny" : "0.019"
+            "Module::Build::Tiny" : "0.034"
          }
       },
       "develop" : {
@@ -36,21 +36,28 @@
             "Devel::PPPort" : "3",
             "Dist::Zilla::Role::FileGatherer" : "0",
             "Moose" : "0",
-            "MooseX::Types::Path::Class" : "0",
             "MooseX::Types::Perl" : "0",
+            "MooseX::Types::Stringlike" : "0",
             "perl" : "5.008"
          }
       },
       "test" : {
          "requires" : {
-            "File::Find" : "0",
-            "File::Temp" : "0",
+            "File::Spec" : "0",
+            "IO::Handle" : "0",
+            "IPC::Open3" : "0",
             "Path::Class" : "0",
             "Test::DZil" : "0",
             "Test::More" : "0.88",
             "strict" : "0",
             "warnings" : "0"
          }
+      }
+   },
+   "provides" : {
+      "Dist::Zilla::Plugin::PPPort" : {
+         "file" : "lib/Dist/Zilla/Plugin/PPPort.pm",
+         "version" : "0.006"
       }
    },
    "release_status" : "stable",
@@ -65,6 +72,6 @@
          "web" : "https://github.com/Leont/dist-zilla-plugin-ppport"
       }
    },
-   "version" : "0.005"
+   "version" : "0.006"
 }
 

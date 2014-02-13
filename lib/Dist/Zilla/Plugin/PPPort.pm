@@ -1,13 +1,10 @@
 package Dist::Zilla::Plugin::PPPort;
-{
-  $Dist::Zilla::Plugin::PPPort::VERSION = '0.005';
-}
-
+$Dist::Zilla::Plugin::PPPort::VERSION = '0.006';
 use 5.008;
 use Moose;
 with qw/Dist::Zilla::Role::FileGatherer/;
-use MooseX::Types::Perl qw(VersionObject);
-use MooseX::Types::Path::Class qw(File);
+use MooseX::Types::Perl qw(StrictVersionStr);
+use MooseX::Types::Stringlike 'Stringlike';
 use Devel::PPPort;
 
 my $content;
@@ -19,23 +16,22 @@ my $content;
 }
 
 has filename => (
-	is => 'ro',
-	isa => File,
+	is      => 'ro',
+	isa     => Stringlike,
+	coerce  => 1,
 	default => 'ppport.h',
-	coerce => 1,
 );
 
 has version => (
-	is => 'ro',
-	isa => VersionObject,
+	is      => 'ro',
+	isa     => StrictVersionStr,
 	default => 0,
-	coerce => 1,
 );
 
 sub gather_files {
 	my $self = shift;
 	Devel::PPPort->VERSION($self->version) if $self->version;
-	$self->add_file(Dist::Zilla::File::InMemory->new(name => $self->filename->stringify, content => $content));
+	$self->add_file(Dist::Zilla::File::InMemory->new(name => $self->filename, content => $content, encoding => 'ascii'));
 	return;
 }
 
@@ -45,7 +41,13 @@ no Moose;
 
 1;
 
+#ABSTRACT: PPPort for Dist::Zilla
+
+__END__
+
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -53,7 +55,7 @@ Dist::Zilla::Plugin::PPPort - PPPort for Dist::Zilla
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
 =head1 SYNOPSIS
 
@@ -81,8 +83,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-__END__
-
-#ABSTRACT: PPPort for Dist::Zilla
-
