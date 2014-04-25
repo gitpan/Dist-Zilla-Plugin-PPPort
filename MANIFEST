@@ -7,7 +7,6 @@ MANIFEST
 META.json
 META.yml
 README
-corpus/dist.ini
 corpus/lib/Foo.pm
 dist.ini
 lib/Dist/Zilla/Plugin/PPPort.pm

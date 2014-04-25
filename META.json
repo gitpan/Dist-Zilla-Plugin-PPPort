@@ -33,12 +33,15 @@
       },
       "runtime" : {
          "requires" : {
-            "Devel::PPPort" : "3",
+            "Devel::PPPort" : "3.23",
             "Dist::Zilla::Role::FileGatherer" : "0",
+            "Dist::Zilla::Role::PrereqSource" : "0",
+            "File::Spec::Functions" : "0",
             "Moose" : "0",
+            "Moose::Util::TypeConstraints" : "0",
             "MooseX::Types::Perl" : "0",
             "MooseX::Types::Stringlike" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       },
       "test" : {
@@ -57,7 +60,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::PPPort" : {
          "file" : "lib/Dist/Zilla/Plugin/PPPort.pm",
-         "version" : "0.006"
+         "version" : "0.007"
       }
    },
    "release_status" : "stable",
@@ -72,6 +75,6 @@
          "web" : "https://github.com/Leont/dist-zilla-plugin-ppport"
       }
    },
-   "version" : "0.006"
+   "version" : "0.007"
 }
 
